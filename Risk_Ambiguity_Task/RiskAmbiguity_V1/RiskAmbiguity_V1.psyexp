@@ -1,0 +1,199 @@
+<PsychoPy2experiment version="1.82.01" encoding="utf-8">
+  <Settings>
+    <Param name="Show mouse" val="False" valType="bool" updates="None"/>
+    <Param name="Data filename" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None"/>
+    <Param name="Monitor" val="testMonitor" valType="str" updates="None"/>
+    <Param name="Enable Escape" val="True" valType="bool" updates="None"/>
+    <Param name="color" val="black" valType="str" updates="None"/>
+    <Param name="Window size (pixels)" val="[1920, 1080]" valType="code" updates="None"/>
+    <Param name="Full-screen window" val="True" valType="bool" updates="None"/>
+    <Param name="colorSpace" val="rgb" valType="str" updates="None"/>
+    <Param name="Experiment info" val="{u'session': u'001', u'participant': u''}" valType="code" updates="None"/>
+    <Param name="Save csv file" val="False" valType="bool" updates="None"/>
+    <Param name="Show info dlg" val="True" valType="bool" updates="None"/>
+    <Param name="Save wide csv file" val="True" valType="bool" updates="None"/>
+    <Param name="Save psydat file" val="True" valType="bool" updates="None"/>
+    <Param name="expName" val="RiskAmbiguity_V1" valType="str" updates="None"/>
+    <Param name="logging level" val="exp" valType="code" updates="None"/>
+    <Param name="blendMode" val="avg" valType="str" updates="None"/>
+    <Param name="Save excel file" val="False" valType="bool" updates="None"/>
+    <Param name="Units" val="height" valType="str" updates="None"/>
+    <Param name="Use version" val="" valType="str" updates="None"/>
+    <Param name="Save log file" val="True" valType="bool" updates="None"/>
+    <Param name="Screen" val="1" valType="num" updates="None"/>
+  </Settings>
+  <Routines>
+    <Routine name="EndScreen">
+      <TextComponent name="endscreentext">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="endscreentext" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="End of experiment." valType="str" updates="constant"/>
+        <Param name="stopVal" val="20" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="(0, 0)" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="from exp settings" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Presentation_Trial">
+      <ImageComponent name="trialimage">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="trialimage" valType="code" updates="None"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="6.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="(0, 0)" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="from exp settings" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="$ImageFile" valType="str" updates="set every repeat"/>
+        <Param name="size" val="(1.6,0.9)" valType="code" updates="constant"/>
+      </ImageComponent>
+      <KeyboardComponent name="right_or_left">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="right_or_left" valType="code" updates="None"/>
+        <Param name="stopVal" val="6.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="allowedKeys" val="'1','0'" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="store" val="last key" valType="str" updates="constant"/>
+        <Param name="syncScreenRefresh" val="True" valType="bool" updates="constant"/>
+      </KeyboardComponent>
+      <CodeComponent name="save_onsets">
+        <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="save_onsets" valType="code" updates="None"/>
+        <Param name="Begin Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="trialendtime = t&#10;thisExp.addData('TrialStartTime',trialimage.tStart)&#10;thisExp.addData('TrialEndTime',trialendtime)" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="ChipsWelcomeScreen">
+      <TextComponent name="textwelcome_chips">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="textwelcome_chips" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="Welcome to the Chips Game.&#10;&#10;Remember to press '1' to choose the left option and '0' to choose the right option.&#10;&#10;When you are ready, press the spacebar to continue." valType="str" updates="constant"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="(0, 0)" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="from exp settings" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.05" valType="code" updates="constant"/>
+      </TextComponent>
+      <KeyboardComponent name="wait_for_spacebar_chips">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="wait_for_spacebar_chips" valType="code" updates="None"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="allowedKeys" val="'space'" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="store" val="last key" valType="str" updates="constant"/>
+        <Param name="syncScreenRefresh" val="True" valType="bool" updates="constant"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="ISI_NoResponse">
+      <TextComponent name="ISI_NoResponse_Fixation">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="ISI_NoResponse_Fixation" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="+" valType="str" updates="constant"/>
+        <Param name="stopVal" val="1.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="(0, 0)" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="from exp settings" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="ISI">
+      <TextComponent name="ISI_fixation">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="ISI_fixation" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="+" valType="str" updates="constant"/>
+        <Param name="stopVal" val="1.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="(0, 0)" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="from exp settings" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="ChipsWelcomeScreen"/>
+    <Routine name="ISI_NoResponse"/>
+    <LoopInitiator loopType="TrialHandler" name="choicetrials">
+      <Param name="conditionsFile" val="RiskAmbiguity_ConditionFile_V1.xlsx" valType="str" updates="None"/>
+      <Param name="name" val="choicetrials" valType="code" updates="None"/>
+      <Param name="isTrials" val="True" valType="bool" updates="None"/>
+      <Param name="random seed" val="" valType="code" updates="None"/>
+      <Param name="loopType" val="random" valType="str" updates="None"/>
+      <Param name="nReps" val="1" valType="code" updates="None"/>
+      <Param name="endPoints" val="[0, 1]" valType="num" updates="None"/>
+      <Param name="conditions" val="[{u'riskprob': 0.5, u'winval': 4L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide001.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 4L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide002.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 4L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide003.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 4L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide004.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.25, u'winval': 5L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide005.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 5L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide006.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 5L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide007.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 5L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide008.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 5L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide009.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 5L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide010.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 6L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide011.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 6L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide012.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 6L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide013.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 6L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide014.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 6L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide015.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 6L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide016.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 7L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide017.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 7L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide018.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 7L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide019.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 7L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide020.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 7L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide021.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 7L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide022.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 8L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide023.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 8L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide024.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 8L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide025.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 8L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide026.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 8L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide027.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 8L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide028.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 9L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide029.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 9L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide030.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 9L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide031.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 9L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide032.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 9L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide033.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 9L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide034.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 10L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide035.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 10L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide036.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 10L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide037.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 10L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide038.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 10L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide039.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 10L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide040.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 12L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide041.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 12L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide042.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 12L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide043.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 12L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide044.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 12L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide045.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 12L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide046.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 14L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide047.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 14L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide048.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 14L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide049.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 14L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide050.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 14L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide051.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 14L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide052.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 16L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide053.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 16L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide054.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 16L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide055.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 16L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide056.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 16L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide057.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 16L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide058.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 18L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide059.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 18L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide060.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 18L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide061.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 18L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide062.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 18L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide063.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 18L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide064.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 20L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide065.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 20L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide066.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 20L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide067.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 20L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide068.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 20L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide069.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 20L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide070.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 23L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide071.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 23L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide072.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 23L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide073.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 23L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide074.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 23L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide075.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 23L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide076.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 26L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide077.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 26L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide078.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 26L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide079.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 26L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide080.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 26L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide081.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 26L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide082.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 30L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide083.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 30L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide084.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 30L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide085.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 30L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide086.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 30L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide087.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 30L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide088.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 34L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide089.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 34L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide090.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 34L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide091.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 34L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide092.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 34L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide093.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 34L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide094.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 39L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide095.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 39L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide096.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 39L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide097.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 39L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide098.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 39L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide099.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 39L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide100.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 44L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide101.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 44L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide102.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 44L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide103.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 44L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide104.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 44L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide105.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 44L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide106.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 50L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide107.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 50L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide108.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 50L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide109.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 50L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide110.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 50L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide111.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 50L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide112.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 57L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide113.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 57L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide114.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 57L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide115.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 57L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide116.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 57L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide117.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 57L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide118.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}, {u'riskprob': 0.25, u'winval': 66L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide119.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 66L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide120.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.75, u'winval': 66L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide121.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0L}, {u'riskprob': 0.5, u'winval': 66L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide122.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.24}, {u'riskprob': 0.5, u'winval': 66L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide123.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.5}, {u'riskprob': 0.5, u'winval': 66L, u'nowinval': 0L, u'ImageFile': u'V1_TrialImages/Slide124.jpg', u'riskOp': 1L, u'certainval': 5L, u'ambiglevel': 0.74}]" valType="str" updates="None"/>
+      <Param name="Selected rows" val="" valType="str" updates="None"/>
+    </LoopInitiator>
+    <Routine name="Presentation_Trial"/>
+    <Routine name="ISI"/>
+    <LoopTerminator name="choicetrials"/>
+    <Routine name="ISI_NoResponse"/>
+    <Routine name="EndScreen"/>
+  </Flow>
+</PsychoPy2experiment>
