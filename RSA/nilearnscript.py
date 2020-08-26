@@ -26,9 +26,10 @@ def setMasker(msk, smth):
 templatepath = '/Users/nataliesaragosa-harris/Desktop/cts/template_rsa_file.csv'
 # studydir = '/u/project/silvers/data/CTS'
 studydir = '/Users/nataliesaragosa-harris/Desktop/cts'
+outputdir = '/Users/nataliesaragosa-harris/Desktop/cts/'
 
 template = pandas.read_csv(templatepath, index_col="Actor")
-# actors = template['Actor']
+# actors = template.index.values
 # actors = ['HM10']
 actors = ['HM10','AF08','HF10']
 # participants = ['CTS001','CTS003','CTS004','CTS006','CTS009','CTS011','CTS012','CTS014','CTS019']
@@ -67,18 +68,17 @@ for p in participants:
     for act in actors:  # go through every row (corresponds to an actor).
         # act = 'HF10'
         print(act)
-        print('%s%s'%('Loading actor: ',act))
+        print('%s%s' % ('Loading actor: ', act))
         # There should be three trials (feat directories), all in different runs, that match this actor.
-        trials = glob.glob('%s/%s/model/run*_lev1_lss-rsa_%s*.feat' % (studydir, p, act))
+        trials = glob.glob('%s/%s/model/run*_lev1_lss-rsa_%s*.feat/stats/zstat1.nii.gz' % (studydir, p, act))
 
-        if len(trials) != 3: # Check that there are three trials.
-            print("Error: This actor does not have three trials.")
-            #exit()
+        if len(trials) != 3:  # Check that there are three trials.
+            print("Error: This actor does not have three zstat trials.")
             continue
 
         # zstat1 should be the one to use for every trial.
         # I am looping through each run, which corresponds to each trial with that actor.
-        allruns = ['run1','run2','run3']
+        allruns = ['run1', 'run2', 'run3']
 
         for run in allruns:
             print('%s%s' % ('Loading run: ', run))
@@ -112,7 +112,7 @@ for p in participants:
         print(AO_SUR_corr)
         HO_SUR_corr = np.corrcoef(SUR_face_z, HO_face_z)[0, 1]
         print(HO_SUR_corr)
-        AO_HO_corr =  np.corrcoef(AO_face_z, HO_face_z)[0, 1]
+        AO_HO_corr = np.corrcoef(AO_face_z, HO_face_z)[0, 1]
         print(AO_HO_corr)
         # At this step, we want to save to pfile.
         # Find that actor's row, then add to correct column.
@@ -129,7 +129,11 @@ for p in participants:
         # Is there a way to make sure the SUR_face_z, etc. are empty at the end of the actor loop
         # so that it doesn't save the values from the previous actor?
         # SUR_AO_corr = None # can do this but seems weird because python is dynamic so i'm not sure.
+    # Save pfile for the current participant.
+    pfile.to_csv('%s%s_correlations.csv' % (outputdir, p))
 
+
+################################################################################
 # Code from https://dartbrains.org/features/notebooks/15_RSA.html
 import os
 import matplotlib.pyplot as plt
